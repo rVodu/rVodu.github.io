@@ -1,3 +1,100 @@
 h1 {
     color: red;
 }
+/* Базовые сбросы и настройки */
+.body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Главный контейнер */
+.main {
+  max-width: 1440px;    /* Максимальная ширина всего контента */
+  margin: 0 auto;       /* Выравнивание по центру */
+  padding: 0 20px;      /* Отступы по бокам на мобильных */
+}
+
+/* Шапка сайта */
+.page-header {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Главный заголовок на главной */
+.home__main-header {
+  max-width: 1200px;
+  margin: 0 auto 100px;  /* снизу 100px отступа */
+  padding: 80px 0;
+  text-align: center;
+}
+
+/* Блок с кнопками предложений */
+.home__offers {
+  max-width: 800px;
+  margin: 0 auto 100px;
+  padding: 60px 40px;
+  text-align: center;
+  background: #f5f5f5;  /* временно для визуализации */
+}
+
+/* Блок "О нас" */
+.home__about {
+  max-width: 1200px;
+  margin: 0 auto 100px;
+  padding: 80px 0;
+}
+
+/* Блок "Мероприятия" */
+.home__upcoming {
+  max-width: 1200px;
+  margin: 0 auto 100px;
+  padding: 80px 0;
+}
+
+/* Блок "Блог" */
+.home__listing {
+  max-width: 1200px;
+  margin: 0 auto 100px;
+  padding: 80px 0;
+}
+
+/* Блок "Контакты" */
+.home__contacts {
+  max-width: 1000px;
+  margin: 0 auto 100px;
+  padding: 80px 0;
+}
+
+/* Заголовки секций */
+.section-title {
+  max-width: 1200px;
+  margin: 0 auto 60px;
+  text-align: center;
+  font-size: 36px;
+}
+
+/* Кнопки в блоке offers */
+.offers-btns {
+  max-width: 500px;
+  margin: 40px auto 0;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.offers-btn {
+  padding: 15px 30px;
+  border: 2px solid #000;
+  background: transparent;
+  cursor: pointer;
+}
+
+.btn--red {
+  background: #ff0000;
+  color: white;
+  border-color: #ff0000;
+}
