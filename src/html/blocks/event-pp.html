@@ -10,15 +10,16 @@
         <div class="pp__container">
             <h2 class="pp__title">
                 Заполните форму<br />
-                и мы поберем площадку
+                и мы подберем площадку
             </h2>
             <form class="pp__form form">
 
                 <div class="form__list">
                     <div class="field form__field form__field--w50">
                         <h5 class="field__title">
-                            Формат мероприятия
+                            Формат мероприятия:
                         </h5>
+
                         <div class="radio field__radio">
                             <label class="radio__item">
                                 <input class="radio__input" type="radio" name="format" value="seminar" checked />
@@ -33,7 +34,7 @@
                             <label class="radio__item">
                                 <input class="radio__input" type="radio" name="format" value="show" />
                                 <span class="radio__mark"></span>
-                                <span class="radio__label">Выставка/показ</span>
+                                <span class="radio__label">Выставка/другое</span>
                             </label>
                             <label class="radio__item">
                                 <input class="radio__input" type="radio" name="format" value="other" />
@@ -46,7 +47,7 @@
                     <div class="form__group form__group--w50">
                         <label class="form__field field">
                             <span class="field__title">
-                                Планируемое количество посетителей:
+                                Планируемое количество поситителей:
                             </span>
                             <select class="field__select" name="amount">
                                 <option value="20">до 20 человек</option>
@@ -55,17 +56,16 @@
                                 <option value="1000">более 500 человек</option>
                             </select>
                         </label>
-
                         <div class="field form__field form__field--m0">
                             <h5 class="field__title">
-                                Дата вроведения:
+                                Дата проведение:
                             </h5>
                             <div class="field__date">
                                 <div class="field__date-inputs">
-                                    <input class="field__date-input" type="text" placeholder="ДД" />
-                                    <input class="field__date-input" type="text" placeholder="ММ" />
+                                    <input class="field__date-input" type="text" placeholder="ДД" required />
+                                    <input class="field__date-input" type="text" placeholder="ММ" required />
                                     <input class="field__date-input field__date-input--year" type="text"
-                                        placeholder="ГГГГ" />
+                                        placeholder="ГГГГ" required />
                                 </div>
                             </div>
                         </div>
@@ -94,9 +94,10 @@
                     </label>
                 </div>
 
-
                 <label class="field form__field">
-                    <span class="field__title">Есть пожелания? Напишите нам: </span>
+                    <span class="field__title">
+                        Есть пожелания? Напишите нам:
+                    </span>
                     <textarea class="field__textarea" name="Пожелания"></textarea>
                 </label>
 

@@ -3,37 +3,54 @@
 
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
   <title>Lenni Art</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles/styles.min.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles/styles.css">
 </head>
 
 <body class="body">
   <header class="page-header">
     <div class="page-header__container">
       <a href="#" class="page-header__logo">
-        <svg class="page-header__logo-icon" width="202" height="147">
-          <use xlink:href="assets/icons/symbols.svg#logo">
+        <svg class="page-header__logo-icon">
+          <use xlink:href="assets/icons/symbols.svg#logo" />
         </svg>
       </a>
       <nav class="page-header__nav">
-        <a href="#" class="page-header__nav-link">Мероприятия</a>
-        <a href="#" class="page-header__nav-link">Блог</a>
-        <a href="#" class="page-header__nav-link">О нас</a>
-        <a href="#" class="page-header__nav-link">Контакты</a>
+        <a class="page-header__nav-link" href="#">Мероприятия</a>
+        <a class="page-header__nav-link" href="#">Блог</a>
+        <a class="page-header__nav-link" href="#">О нас</a>
+        <a class="page-header__nav-link" href="#">Контакты</a>
+        <div class="page-header__nav-user">
+          <a href="#" class="page-header__nav-user-link">Александр С.</a>
+          <a href="#" class="page-header__nav-logout">
+            <svg class="page-header__logo-icon" width="24" height="24">
+              <use xlink:href="assets/icons/symbols.svg#logout" />
+            </svg>
+          </a>
+        </div>
       </nav>
       <div class="page-header__right-block">
-        <a href="#" class="page-header__btn btn">Войти</a>
+        <a class="page-header__btn" href="#"> Войти
+          <svg class="page-header__user-icon" width="24" height="24">
+            <use xlink:href="assets/icons/symbols.svg#user" />
+          </svg>
+        </a>
+        <button type="button" class="page-header__nav-toggle"></button>
       </div>
     </div>
   </header>
-  <main class="main">
-    <article class="event">
 
+  <main class="main">
+    <!-- Здесь будут хлебные крошки -->
+
+
+    <article class="event">
       <div class="event__content content">
-        <h5>Программа мероприятия:</h5>
+        <h5>Программа мероприятия</h5>
         <ul>
           <li>20:15 — Приветствие гостей</li>
           <li>20:30 — Первая подача блюд | Салаты</li>
@@ -47,15 +64,12 @@
         <h5>The Best Of Sade</h5>
         <p>
           Первый альбом-компиляция Sade, выпущенный в 1994 году. Он содержит 9
-          треков, включая самые популярные хиты группы, раритеты и их любимые
-          треки.
+          треков, включая самые популярные хиты группы, раритеты и их любимые треки.
         </p>
-        <P>
-          Группа продемонстрировала необычайное долголетие и креативность
-          своей творческой карьеры. Она лидировала музыкальных чартах с 1994
-          по 1995 год, став четырехкратно платиновой в США и продав более 2
-          миллионов копий в Европе.
-        </P>
+        <p>Группа продемонстрировала необычайное долголетие и креативность своей творческой карьеры.
+          Она лидировала музыкальных чартах с 1994 по 1995 год, став четырехкратно платиновой в США и продав
+          более 2 миллионов копий в Европе.
+        </p>
         <ol>
           <li>Your Love Is King</li>
           <li>Hang On To Your Love</li>
@@ -68,16 +82,26 @@
           <li>Paradise</li>
         </ol>
       </div>
-
-      <form class="reserve-event__reserve">
-        <div class="reserve__checks">Чекбоксы</div>
-        <div class="reserve__scheme">Схема столов</div>
-        <div class="reserve__erder">Оформление заказа</div>
-        <div class="reserve__legend">Легенда</div>
+      <form class="reserve event__reserve">
+        <div class="reserve__checks">
+          Чекбоксы
+        </div>
+        <div class="reserve__scheme">
+          Схема столов
+        </div>
+        <div class="reserve__order">
+          Оформление заказа
+        </div>
+        <div class="reserve__legend">
+          Легенда
+        </div>
       </form>
     </article>
   </main>
+
+
   <footer class="page-footer"></footer>
+
 </body>
 
 </html>

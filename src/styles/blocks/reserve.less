@@ -1,26 +1,30 @@
 .reserve {
     display: grid;
-    grid-template-columns: 405px 1fr;
-    /* grid-template-columns: 405px calc(89% - 405 px); */
     gap: 65px 11%;
+    grid-template-columns: 405px calc(89% - 405px);
     grid-template-areas:
-        "cheks scheme"
+        "checks scheme"
         "order legend";
     width: 100%;
+
     &__cheks {
         grid-area: checks;
-        background-color: yellow;
+        background-color: #ffff00;
     }
+
     &__scheme {
         grid-area: scheme;
-        background-color: rgb(255, 162, 0);
+        background-color: #00ff40;
     }
+
     &__order {
         grid-area: order;
-        background-color: rgb(76, 0, 255);
+        background-color: #00aeff;
     }
+
     &__legend {
         grid-area: legend;
-        background-color: rgb(255, 0, 81);
+        background-color: #ff00b3;
     }
+
 }

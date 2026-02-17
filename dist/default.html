@@ -3,38 +3,50 @@
 
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
   <title>Lenni Art</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles/styles.min.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles/styles.css">
 </head>
 
 <body class="body">
   <header class="page-header">
     <div class="page-header__container">
       <a href="#" class="page-header__logo">
-        <svg class="page-header__logo-icon" width="202" height="147">
-          <use xlink:href="assets/icons/symbols.svg#logo">
+        <svg class="page-header__logo-icon">
+          <use xlink:href="assets/icons/symbols.svg#logo" />
         </svg>
       </a>
       <nav class="page-header__nav">
-        <a href="#" class="page-header__nav-link">Мероприятия</a>
-        <a href="#" class="page-header__nav-link">Блог</a>
-        <a href="#" class="page-header__nav-link">О нас</a>
-        <a href="#" class="page-header__nav-link">Контакты</a>
+        <a class="page-header__nav-link" href="#">Мероприятия</a>
+        <a class="page-header__nav-link" href="#">Блог</a>
+        <a class="page-header__nav-link" href="#">О нас</a>
+        <a class="page-header__nav-link" href="#">Контакты</a>
+        <div class="page-header__nav-user">
+          <a href="#" class="page-header__nav-user-link">Александр С.</a>
+          <a href="#" class="page-header__nav-logout">
+            <svg class="page-header__logo-icon" width="24" height="24">
+              <use xlink:href="assets/icons/symbols.svg#logout" />
+            </svg>
+          </a>
+        </div>
       </nav>
       <div class="page-header__right-block">
-        <a href="#" class="page-header__btn btn">Войти</a>
+        <a class="page-header__btn" href="#"> Войти
+          <svg class="page-header__user-icon" width="24" height="24">
+            <use xlink:href="assets/icons/symbols.svg#user" />
+          </svg>
+        </a>
+        <button type="button" class="page-header__nav-toggle"></button>
       </div>
     </div>
   </header>
   <main class="main">
     <article class="article">
       <div class="article__container">
-        <h1 class="h1article__title">
-          Заголовок страницы
-        </h1>
+        <h1 class="article__title">Заголовок страницы</h1>
         <div class="article__content content">
           <h1>Заголовок</h1>
           <h2>Заголовок</h2>
@@ -45,20 +57,22 @@
           <h5>Заголовок текстового блока</h5>
 
           <p>
-            С точки зpения банальной эpyдиции каждый индивидyyм, кpитически мотивиpyющий абстpакцию, не
-            может игноpиpовать кpитеpии yтопического сyбьективизма, концептyально интеpпpетиpyя общепpинятые
-            дефанизиpyющие поляpизатоpы.
+            С точки зpения банальной эpyдиции каждый индивидyyм, кpитически
+            мотивиpyющий абстpакцию, не может игноpиpовать кpитеpии
+            yтопического сyбьективизма, концептyально интеpпpетиpyя
+            общепpинятые дефанизиpyющие поляpизатоpы.
           </p>
 
           <p>
-            Поэтомy <a href="#"> консенсyс</a>, достигнyтый диалектической матеpиальной классификацией
-            всеобщих мотиваций в
-            паpадогматических связях пpедикатов, pешает пpоблемy yсовеpшенствования фоpмиpyющих
+            Поэтомy <a href="#"> консенсyс</a>, достигнyтый диалектической матеpиальной
+            классификацией всеобщих мотиваций в паpадогматических связях
+            пpедикатов, pешает пpоблемy yсовеpшенствования фоpмиpyющих
             геотpансплантационных квазипyзлистатов всех кинетически
             <b>коpеллиpyющих аспектов</b>.
           </p>
 
           <h5>Ненумерованный список</h5>
+
           <ul>
             <li>20:15 — Приветствие гостей</li>
             <li>20:30 — Первая подача блюд | Салаты</li>
@@ -84,6 +98,16 @@
             <img src="assets/images/pic.jpg" />
             <figcaption>Подпись картинки</figcaption>
           </figure>
+
+          <p>
+            Нельзя забывать, что разлагая ультрамасштабированную
+            гиперонноаттрофированную неквантованную функцию аппроксимирования
+            позитронного стабилотрона в ряд декомпрессированных математических
+            экзистенциальных субрудиментов, необходимо прибегнуть к
+            методу упорядочивания гипертронических дисперсионных антикварков.
+          </p>
+
+          <img src="assets/images/pic.jpg" />
 
           <p>
             Нельзя забывать, что разлагая ультрамасштабированную

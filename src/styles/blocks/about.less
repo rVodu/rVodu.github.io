@@ -1,12 +1,15 @@
 .about {
+
     &__container {
-        .container ();
+        .container();
+        display: flex;
+
     }
 
     &__block2 {
         display: grid;
         grid-template-columns: 1fr 406px;
-        gap: 90px 65px;
+        gap: 90px 60px;
         grid-template-areas:
             "pic pic2"
             "title pic2"
@@ -26,7 +29,8 @@
 
     &__picture2 {
         grid-area: pic2;
-        align-self: end;
+        align-self: flex-end;
+        float: right;
     }
 
     &__text {
