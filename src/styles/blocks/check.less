@@ -10,11 +10,34 @@
     color: @black;
     cursor: pointer;
 
+    &--red {
+        color: @red;
+
+        .check__mark {
+            border-color: @red;
+        }
+
+        .check__input {
+            &:checked {
+                &~.check__mark {
+                    background-color: @red;
+                }
+            }
+        }
+    }
+
+    &--disabled {
+        pointer-events: none;
+        opacity: 0.5;
+    }
+
     &__input {
         .is-hidden();
+
         &:checked {
-            & ~ .check__mark {
+            &~.check__mark {
                 background-color: @black;
+
                 &::after {
                     content: '';
                     display: block;
@@ -22,7 +45,7 @@
                     left: 7px;
                     top: 2px;
                     width: 6px;
-                    height: 12px; 
+                    height: 12px;
                     border-bottom: 2px solid @white;
                     border-right: 2px solid @white;
                     transform: rotate(45deg);
@@ -47,6 +70,7 @@
         font-weight: 400;
         font-size: 16px;
         line-height: 1.375;
+
         &--fz14 {
             font-size: 14px;
         }

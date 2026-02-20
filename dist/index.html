@@ -77,41 +77,81 @@
       </section>
     </div>
     <!-- prettier-ignore -->
-    <section class="listing home__listing">
-      <h2 clas="section-title listing__title">
-        Блог
-      </h2>
-      <div class="listing__article-list">
-        <!-- prettier ignore -->
-        <article class="article-card ">
-          <a href="#" class="article-card__link">
-            <picture class="article-card__picture">
-              <img src="" alt="" class="article-card__img" />
-            </picture>
-          </a>
-          <div class="article-card__info">
-            <time datetime="" class="article-card__time">
+    <div class="listing__container">
+      <section class="listing home__listing">
+        <h2 class="listing__title section-title">Блог</h2>
+        <div class="listing__article-list">
+          <!-- prettier ignore -->
+          <article class="article-card listing__article-card">
+            <a href="#" class="article-card__link">
+              <picture class="article-card__picture">
+                <source type="image/webp" media="(max-width: 450px)" srcset="assets/images/blog/theatre.webp" />
+                <source media="(max-width: 450px)" srcset="assets/images/blog/theatre_tablet.jpg" />
 
-            </time>
-            <a href="#" class="article-card__title-link">
-              <h4 class="article-card__title">
+                <source type="image/webp" media="(max-width: 1169px)" srcset="assets/images/blog/theatre_tablet.webp" />
+                <source media="(max-width: 1169px)" srcset="assets/images/blog/theatre_tablet.jpg" />
 
-              </h4>
-              <span class="article-card__arrow arrow">
-                <svg class="arrow-icon" width="91" height="60">
-                  <use xlink:href="assets/icons/symbols.svg#arrow"></use>
-                </svg>
-              </span>
+                <source type="image/webp" srcset="assets/images/blog/theatre.webp" />
+                <img src="assets/images/blog/theatre.jpg" alt="Theatre Photosession" class="article-card__img" />
+              </picture>
             </a>
-            <p class="article-card__description">
+            <div class="article-card__info">
+              <time datetime="2021-11-26T00:00" class="article-card__time">
+                26.11.2021
+              </time>
+              <a href="#" class="article-card__title-link">
+                <h4 class="article-card__title">
+                  Фотосессия в стенах Театра драмы
+                </h4>
+                <span class="article-card__arrow arrow">
+                  <svg class="arrow-icon" width="91" height="60">
+                    <use xlink:href="assets/icons/symbols.svg#arrow"></use>
+                  </svg>
+                </span>
+              </a>
+              <p class="article-card__description">
+                Организовывая фотосессию для локального бренда одежды мы смогли воплотить все пожелания заказчика и у нас получилась отличная работа. Смотрите как это было
+              </p>
+            </div>
 
-            </p>
-          </div>
+          </article>
+          <article class="article-card listing__article-card">
+            <a href="#" class="article-card__link">
+              <picture class="article-card__picture">
+                <source type="image/webp" media="(max-width: 450px)" srcset="assets/images/blog/theatre.webp" />
+                <source media="(max-width: 450px)" srcset="assets/images/blog/theatre_tablet.jpg" />
 
-        </article>
-      </div>
-      <a href="#" class="listing__link link">Смотреть все</a>
-    </section>
+                <source type="image/webp" media="(max-width: 1169px)" srcset="assets/images/blog/theatre_tablet.webp" />
+                <source media="(max-width: 1169px)" srcset="assets/images/blog/theatre_tablet.jpg" />
+
+                <source type="image/webp" srcset="assets/images/blog/theatre.webp" />
+                <img src="assets/images/blog/theatre.jpg" alt="Theatre Photosession" class="article-card__img" />
+              </picture>
+            </a>
+            <div class="article-card__info">
+              <time datetime="2021-11-26T00:00" class="article-card__time">
+                26.11.2021
+              </time>
+              <a href="#" class="article-card__title-link">
+                <h4 class="article-card__title">
+                  Фотосессия в стенах Театра драмы
+                </h4>
+                <span class="article-card__arrow arrow">
+                  <svg class="arrow-icon" width="91" height="60">
+                    <use xlink:href="assets/icons/symbols.svg#arrow"></use>
+                  </svg>
+                </span>
+              </a>
+              <p class="article-card__description">
+                Организовывая фотосессию для локального бренда одежды мы смогли воплотить все пожелания заказчика и у нас получилась отличная работа. Смотрите как это было
+              </p>
+            </div>
+
+          </article>
+        </div>
+        <a href="#" class="listing__link link">Смотреть все</a>
+      </section>
+    </div>
 
   </main>
   <footer class="page-footer"></footer>

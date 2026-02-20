@@ -1,20 +1,35 @@
-<section class="listing @@class">
-    <h2 clas="section-title listing__title">
-        Блог
-    </h2>
-    <div class="listing__article-list">
+<div class="listing__container">
+    <section class="listing @@class">
+        <h2 class="listing__title section-title">Блог</h2>
+        <div class="listing__article-list">
         <!-- prettier ignore -->
-        @@loop('article-card.html',[
-            {
-                "class": "",
-                "img": "",
-                "alt": "",
-                "title": "",
-                "descr": "",
-                "time": "",
-                "datetime": "",
-            }
-        ])
-    </div>
-    <a href="#" class="listing__link link">Смотреть все</a>
-</section>
+            @@loop('article-card.html',[
+                {
+                    "class": "listing__article-card",
+                    "img": "assets/images/blog/theatre.jpg",
+                    "img_webp": "assets/images/blog/theatre.webp",
+                    "img_tablet": "assets/images/blog/theatre_tablet.jpg",
+                    "img_tablet_webp": "assets/images/blog/theatre_tablet.webp",
+                    "alt": "Theatre Photosession",
+                    "title": "Фотосессия в стенах Театра драмы",
+                    "descr": "Организовывая фотосессию для локального бренда одежды мы смогли воплотить все пожелания заказчика и у нас получилась отличная работа. Смотрите как это было ",
+                    "time": "26.11.2021",
+                    "datetime": "2021-11-26T00:00"
+                },
+                {
+                    "class": "listing__article-card",
+                    "img": "assets/images/blog/theatre.jpg",
+                    "img_webp": "assets/images/blog/theatre.webp",
+                    "img_tablet": "assets/images/blog/theatre_tablet.jpg",
+                    "img_tablet_webp": "assets/images/blog/theatre_tablet.webp",
+                    "alt": "Theatre Photosession",
+                    "title": "Фотосессия в стенах Театра драмы",
+                    "descr": "Организовывая фотосессию для локального бренда одежды мы смогли воплотить все пожелания заказчика и у нас получилась отличная работа. Смотрите как это было ",
+                    "time": "26.11.2021",
+                    "datetime": "2021-11-26T00:00"
+                },
+            ])
+        </div>
+        <a href="#" class="listing__link link">Смотреть все</a>
+    </section>
+</div>

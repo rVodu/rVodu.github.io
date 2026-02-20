@@ -7,24 +7,192 @@
         "order legend";
     width: 100%;
 
-    &__cheks {
+    @media @bw1340 {
+        grid-template-columns: 340px 1fr;
+        gap: 65px 6.5%;
+    }
+
+    @media @bw1020 {
+        grid-template-columns: 1fr 390px;
+        gap: 60px;
+        grid-template-areas:
+            "scheme scheme"
+            "checks legend"
+            "checks order";
+    }
+
+    @media @bw768 {
+        grid-template-columns: 100%;
+        grid-template-areas:
+            "scheme"
+            "legend"
+            "checks"
+            "order";
+    }
+
+    &__checks {
         grid-area: checks;
-        background-color: #ffff00;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    &__check {
+        margin: 10px 0 0;
     }
 
     &__scheme {
         grid-area: scheme;
-        background-color: #00ff40;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    &__scheme-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        max-width: 780px;
     }
 
     &__order {
         grid-area: order;
-        background-color: #00aeff;
     }
 
     &__legend {
         grid-area: legend;
-        background-color: #ff00b3;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
     }
 
+    &__legend-item {
+        display: flex;
+        margin-bottom: 5px;
+    }
+
+    &__box-red {
+        width: 20px;
+        height: 20px;
+        margin-right: 10px;
+        border: 1px solid @gray;
+        background-color: @red;
+    }
+
+    &__box-black {
+        width: 20px;
+        height: 20px;
+        margin-right: 10px;
+        border: 1px solid @gray;
+        background-color: @black;
+    }
+
+    &__available {
+        display: flex;
+        margin-bottom: 13px;
+    }
+
+    .circle-cross {
+        position: relative;
+        width: 48px;
+        height: 24px;
+        margin-right: 10px;
+    }
+
+    .circle-cross__circle {
+        position: absolute;
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        border: 1px solid #333;
+    }
+
+    .circle-cross__circle--first {
+        border-color: @black;
+    }
+
+    .circle-cross__circle--second {
+        left: 12px;
+        border-color: @red;
+    }
+
+    &__unavailable {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-end;
+    }
+
+    &__icon {
+        width: 26px;
+        height: 26px;
+        margin-right: 29px;
+        border-radius: 50%;
+        background-color: @gray_dark;
+    }
+
+    &__scheme-wrapper {
+        position: relative;
+        width: 100%;
+
+        &::after {
+            content: "";
+            display: block;
+            width: 100%;
+            //padding-top: 51.15384%;
+        }
+    }
+
+    &__scene {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    &__tickets {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+    }
+
+    &__qty {
+        margin-bottom: 16px;
+        &::after {
+            content: " " attr(data-caption) " | " attr(data-price);
+        }
+    }
+
+    &__sum {
+        &::after {
+            content: attr(data-currency);
+            margin-left: 4px;
+            font-size: 0.95em;
+        }
+    }
+
+    &__total {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 26px;
+        &::before {
+            content: attr(data-caption);
+            margin-right: 33.3333px;
+        }
+
+        &::after {
+            content: attr(data-currency);
+            margin-left: 4px;
+            font-size: 0.95em;
+        }
+    }
+
+    &__submit {
+        white-space: nowrap;
+        margin: 50px 0 0;
+        padding: 15px 141px;
+    }
 }
