@@ -1,0 +1,344 @@
+.about {
+    position: relative;
+    margin: 0 auto 210px;
+
+    &__container {
+        .container();
+    }
+
+    &__grid {
+        width: 100%;
+        height: auto;
+        display: grid;
+    }
+
+    &__block1 {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        gap: 90px 65px;
+        grid-template-areas:
+            "title title"
+            "text text";
+        margin-bottom: 100px;
+
+        @media @bw370 {
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+    }
+
+    &__block2 {
+        display: grid;
+        grid-template-columns: 1fr 406px;
+        gap: 90px 65px;
+        grid-template-areas:
+            "pic pic2"
+            "title2 pic2"
+            "text2 text2";
+        margin-bottom: 74px;
+
+        @media @bw1660 {
+            gap: 80px 40px;
+        }
+
+        @media @bw1020 {
+            grid-template-columns: 1fr 262px;
+            gap: 80px 30px;
+            margin-bottom: 52px;
+            grid-template-areas:
+                "pic pic"
+                "title2 pic2"
+                "text2 pic2";
+        }
+
+        @media @bw370 {
+            grid-template-columns: 120px 130px;
+            gap: 30px;
+            grid-template-areas:
+                "pic pic"
+                "title2 title2"
+                "text2 text2"
+                "pic2 pic2";
+        }
+    }
+
+
+    &__block3 {
+        display: grid;
+        grid-template-columns: 1fr 344px;
+        gap: 88px 40px;
+        grid-template-areas:
+            "pic3 text3"
+            "pic3 button";
+
+        @media @bw1020 {
+            grid-template-areas:
+                "pic3 pic3"
+                "text3 button";
+        }
+
+        @media @bw370 {
+            grid-template-columns: 120px 120px;
+            grid-template-areas:
+                "pic3 pic3"
+                "text3 text3"
+                "button button";
+        }
+    }
+
+    &__picture {
+        grid-area: pic;
+    }
+
+    &__picture2 {
+        grid-area: pic2;
+        align-self: flex-end;
+
+        @media @bw1020 {
+            align-self: start;
+        }
+
+        @media @bw768 {
+            max-width: 193px;
+            margin: 0 0 0 auto;
+        }
+    }
+
+    &__picture3 {
+        grid-area: pic3;
+    }
+
+    &_img {
+        @media @bw768 {
+            max-width: 280px;
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &__img3 {
+        width: 100%;
+        max-width: 870px;
+        height: 100%;
+        object-fit: cover;
+        margin-left: 49px;
+        margin-top: -227px;
+
+        @media @bw1660 {
+            margin-top: -213px;
+            margin-left: 38px;
+        }
+
+        @media @bw1370 {
+            max-width: 821px;
+        }
+
+        @media @bw1020 {
+            margin-top: -135px;
+            margin-left: 30px;
+            max-width: 672px;
+        }
+
+        @media @bw500 {
+            max-width: 267px;
+            height: 111px;
+            margin-left: 11px;
+            margin-top: -67px;
+        }
+
+        @media @bw370 {
+            max-width: 267px;
+            height: 111px;
+            margin-left: 11px;
+            margin-top: -67px;
+        }
+    }
+
+    &__rectangle {
+        display: block;
+        width: 100%;
+        max-width: 928px;
+        height: 246px;
+        background: @red;
+
+        @media @bw1370 {
+            max-width: 867px;
+        }
+
+        @media @bw1020 {
+            height: 146px;
+        }
+
+        @media @bw768 {
+            max-width: 280px;
+            height: 74px;
+        }
+    }
+
+    &__title {
+        grid-area: title;
+        font-size: 44px;
+        font-weight: 700;
+        margin-top: 0;
+        margin-bottom: 0;
+
+        @media @bw1020 {
+            font-size: 26px;
+        }
+
+        @media @bw768 {
+            font-size: 18px;
+        }
+    }
+
+    &__title2 {
+        grid-area: title2;
+        font-size: 44px;
+        font-weight: 700;
+        padding: 0;
+        margin: 0;
+
+        @media @bw1020 {
+            font-size: 26px;
+        }
+
+        @media @bw768 {
+            font-size: 18px;
+        }
+    }
+
+    &__text {
+        grid-area: text;
+        font-size: 18px;
+        font-weight: 400;
+        font-family: @font6;
+        max-width: 867px;
+        width: 100%;
+        margin: 0 0 0 auto;
+
+        @media @bw1340 {
+            font-size: 16px;
+        }
+
+        @media @bw1020 {
+            max-width: 637px;
+        }
+
+        @media @bw500 {
+            max-width: 280px;
+        }
+
+        @media @bw370 {
+            font-size: 16px;
+            max-width: 280px;
+            width: 100%;
+            margin: 0;
+        }
+    }
+
+    &__text2 {
+        grid-area: text2;
+        font-size: 18px;
+        font-weight: 400;
+        font-family: @font6;
+        margin: 0 0 80px auto;
+        max-width: 870px;
+        width: 100%;
+
+        @media @bw1340 {
+            font-size: 16px;
+        }
+
+        @media @bw1020 {
+            max-width: 348px;
+        }
+
+        @media @bw768 {
+            margin: 0 0 0 auto;
+        }
+    }
+
+    &__text3 {
+        grid-area: text3;
+        font-size: 18px;
+        font-weight: 400;
+        font-family: @font6;
+        width: 100%;
+        max-width: 344px;
+        margin: 0 0 0 auto;
+        align-self: flex-end;
+
+        @media @bw1340 {
+            margin-top: 137px;
+        }
+
+        @media @bw1020 {
+            margin: 0 0 0 auto;
+        }
+
+        @media @bw768 {
+            font-size: 16px;
+        }
+    }
+
+    &__button {
+        grid-area: button;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 180px;
+        margin: 0 88px 0 auto;
+        border: 0;
+        background-color: transparent;
+        align-self: flex-end;
+
+        @media @bw1660 {
+            gap: 137px;
+        }
+
+        @media @bw1020 {
+            gap: 117px;
+            margin: 0 0 0 auto;
+        }
+    }
+
+    &__link {
+        text-decoration: none;
+        font-size: 16px;
+        font-weight: 600;
+        font-family: @font4;
+    }
+
+    @media @bw768 {
+        font-size: 14px;
+    }
+
+    &__arrow {
+        flex-shrink: 0;
+        position: relative;
+        display: inline-block;
+        width: 92px;
+        height: 60px;
+        padding: 0;
+        border: none;
+        background: none;
+        color: @black;
+        font-size: 0;
+        text-decoration: none;
+        transition: color 0.2s;
+
+        @media @bw1340 {
+            width: 67px;
+            height: 40px;
+        }
+
+        &:hover {
+            color: @red;
+        }
+
+        &__icon {
+            width: 100%;
+            height: 100%;
+        }
+    }
+}

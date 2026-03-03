@@ -8,41 +8,48 @@
 
     <main class="main">
         <div class="home">
-            <section class="about">
-                <div class="about__container">
-                    <!-- <h2 class="about__section-title section-title">О нас</h2>
-                    <div class="about__block1">
-                        <h3 class="about__project-title">Проект «Millennials» </h3>
-                        <p class="about__project-text">
-                            Вдохновлен молодыми идейными людьми, увлеченными творчеством, эмоциями и желанием 
-                            сделать мир лучше, проявить себя. У них есть талант и стремление, у нас возможность помочь 
-                            им воплотить их мечту в реальность.
-                        </p>
-                    </div> -->
-                    <div class="about__block2">
-                        <picture class="about__picture">
-                            <img class="about__img" src="assets/images/pic.jpg" alt="pic" />
-                        </picture>
-                        <h3 class="about__title">Мы предоставляем площадки для вашего мероприятия</h3>
-                        <picture class="about__picture2">
-                            <img class="about__img" src="assets/images/pic2.jpg" alt="pic2" />
-                        </picture>
-                        <p class="about__text">
-                            И оказываем помощь с организацией, если вам это нужно. Наша цель:
-                            вовлечь в культурную жизнь города как можно больше людей, помочь
-                            молодым ребятам сделать первые шаги к своей мечте и рассказать
-                            всем о том, что их волнует.
-                        </p>
+            <header class="main-header home__main-header">
+                <h1 class="main-header__title">Арт - пространство</h1>
+
+                <div class="main-header__logo logo">
+                    <div class="logo__wrapper">
+                        <svg class="logo__icon" width="1920" hieght="325">
+                            <use xlink:href="assets/icons/symbols.svg#logo_big"></use>
+                        </svg>
                     </div>
                 </div>
-            </section>
+
+                <p class="main-header__description">
+                    для людей, горящих серде&nbsp;и&nbsp;делом
+                    <br />
+                    место для настоящего
+                </p>
+            </header>
+
+            <!-- prettier-ignore -->
+            @@include('blocks/offers.html', {"class": "home__offers"})
+            <!-- prettier-ignore -->
+            @@include('blocks/about.html', {"class": "home__about"})
+            <!-- prettier-ignore -->
+            @@include('blocks/upcoming.html', {"class": "home__upcoming"})
+            <!-- prettier-ignore -->
+            @@include('blocks/blog-listing.html', {"class": "home__listing"})
+            <!-- prettier-ignore -->
+            <!-- @@include('blocks/contacts.html', {"class": "home__contacts"}) -->
+            <!-- prettier-ignore -->
+            <!-- @@include('blocks/doit.html', {"class": "home__doit"}) -->
         </div>
-        <!-- prettier-ignore -->
-        @@include('blocks/blog-listing.html', {"class": "home__listing"})
-        
     </main>
+
     @@include('blocks/page-footer.html')
+
     @@include('blocks/event-pp.html')
+
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key="
+    ></script>
+    <script src="scripts/swiper.min.js"></script>
+    <script src="scripts/main.min.js"></script>
 </body>
 
 </html>

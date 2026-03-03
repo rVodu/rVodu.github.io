@@ -1,9 +1,30 @@
 .about {
+    position: relative;
+    margin: 0 auto 210px;
 
     &__container {
         .container();
-        display: flex;
+    }
 
+    &__cont {
+        width: 100%;
+        height: auto;
+        display: grid;
+    }
+
+    &__block1 {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        gap: 90px 65px;
+        grid-template-areas:
+            "title2 title2"
+            "text2 text2";
+        margin-bottom: 100px;
+
+        @media @bw370 {
+            gap: 30px;
+            margin-bottom: 60px;
+        }
     }
 
     &__block2 {
@@ -27,6 +48,22 @@
         font-weight: 700;
     }
 
+    &__title2 {
+        grid-area: title2;
+        font-size: 44px;
+        font-weight: 700;
+        margin-top: 0;
+        margin-bottom: 0;
+
+        @media @bw1020 {
+            font-size: 26px;
+        }
+
+        @media @bw768 {
+            font-size: 18px;
+        }
+    }
+
     &__picture2 {
         grid-area: pic2;
         align-self: flex-end;
@@ -38,5 +75,31 @@
         margin: 0 80px 0 auto;
         max-width: 870px;
         width: 100%;
+    }
+
+    &__text2 {
+        grid-area: text2;
+        margin: 0 0 0 auto;
+        max-width: 867px;
+        width: 100%;
+
+        @media @bw1340 {
+            font-size: 16px;
+        }
+
+        @media @bw1020 {
+            max-width: 637px;
+        }
+
+        @media @bw500 {
+            max-width: 280px;
+        }
+
+        @media @bw370 {
+            font-size: 16px;
+            max-width: 280px;
+            width: 100%;
+            margin: 0;
+        }
     }
 }
