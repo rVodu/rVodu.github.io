@@ -8,24 +8,8 @@
 
     <main class="main">
         <div class="home">
-            <header class="main-header home__main-header">
-                <h1 class="main-header__title">Арт - пространство</h1>
-
-                <div class="main-header__logo logo">
-                    <div class="logo__wrapper">
-                        <svg class="logo__icon" width="1920" hieght="325">
-                            <use xlink:href="assets/icons/symbols.svg#logo_big"></use>
-                        </svg>
-                    </div>
-                </div>
-
-                <p class="main-header__description">
-                    для людей, горящих серде&nbsp;и&nbsp;делом
-                    <br />
-                    место для настоящего
-                </p>
-            </header>
-
+            <!-- prettier-ignore -->
+            @@include('blocks/art.html', {"class": "home__art"})
             <!-- prettier-ignore -->
             @@include('blocks/offers.html', {"class": "home__offers"})
             <!-- prettier-ignore -->
@@ -45,9 +29,15 @@
 
     @@include('blocks/event-pp.html')
 
+    <script src="scripts/jquery-3.7.1.min.js"></script>
+    <script src="scripts/jquery.selectric.js"></script>
+    <script src="scripts/jquery.mask.js"></script>
+    <script src="scripts/air-datepicker.js"></script>
     <script
         src="https://maps.googleapis.com/maps/api/js?key="
     ></script>
+    <script src="scripts/jquery.validate.js"></script>
+    <script src="scripts/jquery.validate-init.js"></script>
     <script src="scripts/swiper.min.js"></script>
     <script src="scripts/main.min.js"></script>
 </body>

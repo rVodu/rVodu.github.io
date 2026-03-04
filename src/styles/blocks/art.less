@@ -1,0 +1,65 @@
+.art {
+    display: flex;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+
+    &__container {
+        width: 100%;
+        margin: 0;
+    }
+
+    &__title,
+    &__description {
+        font-size: 45px;
+        font-weight: 400;
+        text-align: center;
+        font-family: @font3;
+        text-transform: uppercase;
+        align-items: center;
+        margin-bottom: 70px;
+
+        @media @bw1170 {
+            margin-bottom: 51px;
+            font-size: 30px;
+            font-family: @font3;
+            font-weight: 400;
+        }
+
+        @media @bw768 {
+            font-size: 13px;
+            margin: 0;
+        }
+    }
+
+    &__title {
+        margin-top: 0;
+    }
+
+    &__description {
+        margin-top: 70px;
+        margin-bottom: 100px;
+    }
+
+    &__icon {
+        display: block;
+        margin: 0 auto;
+        width: 100%;
+        max-width: 1920px;
+        height: 325px;
+
+        @media @bw1660 {
+            margin: 0 auto;
+            width: 100%;
+            max-width: 1518px;
+            height: 257px;
+        }
+
+        @media @bw1020 {
+            margin: 0 auto;
+            width: 100%;
+            max-width: 974px;
+            height: 165px;
+        }
+    }
+}
