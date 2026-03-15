@@ -1,0 +1,77 @@
+.doit {
+    &__container {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: baseline;
+        width: 2161px;
+        font-family: @font3;
+        font-size: 128px;
+        font-weight: 700;
+        margin-top: 150px;
+        margin-bottom: 140px;
+        margin-left: auto;
+        margin-right: auto;
+
+        @media @bw1340 {
+            width: 1519px;
+            font-size: 90px;
+        }
+
+        @media @bw1020 {
+            flex-direction: column;
+            width: 895px;
+            font-size: 80px;
+        }
+
+        @media @bw500 {
+            flex-direction: column;
+            width: 446px;
+            font-size: 40px;
+        }
+    }
+
+    &__text1,
+    &__text2,
+    &__text3 {
+        position: relative;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    &__text1 {
+        display: flex;
+        flex-wrap: wrap;
+        left: -52px;
+
+        @media @bw1340 {
+            left: -30px;
+        }
+
+        @media @bw1020 {
+            left: -26px;
+        }
+
+        @media @bw768 {
+            left: -13px;
+        }
+
+
+    }
+
+    &__text2 {
+        margin-left: auto;
+    }
+
+    &__doit2 {
+        display: block;
+        margin-left: auto;
+    }
+
+    &__doit3 {
+
+        @media @bw1020 {
+            display: block;
+            margin-left: auto;
+        }
+    }
+}

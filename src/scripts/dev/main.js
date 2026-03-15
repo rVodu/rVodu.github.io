@@ -65,7 +65,7 @@
         });
     });
 
-    const contactsMap = document.querySelector("#ja-contactsMap");
+    const contactsMap = document.querySelector("#js-contactsMap");
 
     if (contactsMap) {
         const mapStyles = [
@@ -287,7 +287,26 @@
                 position: google.maps.ControlPosition.RIGHT_BOTTOM
             }
         };
+
+        const map = new google.maps.Map(contactsMap, mapOptions);
+
+        const point = new google.maps.LatLng(56.45446, 84.97889);
+
+        const mapPin = new google.maps.MarkerImage(
+            "data:image/png;base64,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",
+            new google.maps.Size(150, 150), //size
+            new google.maps.Point(0, 0),  //origin point
+            new google.maps.Point(0, 71)  //offset point
+        );
+
+        new google.maps.Marker({
+            position: point,
+            map: map,
+            icon: mapPin,
+            title: "ИТ-Академия ТУСУР"
+        });
     }
+
 
     const jsSelectric = $(".js-selectric");
 
@@ -300,7 +319,7 @@
     const mobileMask = $(".js-mobileMask");
 
     if (mobileMask.length) {
-        mobileMask.mask('+7 (000) 000 00 00', {placeholder: "+7 (___) ___ __ __"});
+        mobileMask.mask('+7 (000) 000 00 00', { placeholder: "+7 (___) ___ __ __" });
     }
 
     const dateField = $(".js-dateField");
@@ -319,19 +338,18 @@
                 navTitle: {
                     days: "MMMM <i>yyyy</i>"
                 },
-                onSelect: function ({date}) {
+                onSelect: function ({ date }) {
                     dateDay.val(date ? ("0" + date.getDate()).slice(-2) : "");
                     dateMonth.val(date ? ("0" + (date.getMonth() + 1)).slice(-2) : "");
                     dateYear.val(date ? date.getFullYear() : "");
-
                 },
             };
 
             new AirDatepicker(dateInput[0], dateConfig);
-        };
+        }
+    };
 
-        $.each(dateField, function(i) {
-            pickerInit($(this));
-        });
-    }
+    $.each(dateField, function (i) {
+        pickerInit($(this))
+    });
 })();

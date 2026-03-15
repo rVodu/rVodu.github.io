@@ -22,15 +22,19 @@
 
 .width_624() {
     box-sizing: border-box;
-    max-width: 624px;
+    width: 624px;
     width: 100%;
 
     @media @bw1660 {
-        max-width: 604px;
+        width: 604px;
     }
 
     @media @bw1340 {
         max-width: 566px;
+    }
+
+    @media @bw650 {
+        max-width: 280px;
     }
 }
 

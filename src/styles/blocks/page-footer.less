@@ -1,0 +1,157 @@
+.page-footer {
+
+    &__container {
+        .container();
+        display: block;
+    }
+
+    &__block1 {
+        display: flex;
+    }
+
+    &__block2 {
+        position: relative; // точка отсчёта для абсолютного позиционирования
+        display: flex;
+        align-items: flex-end; // левый и центральный блоки прижмутся к низу
+        margin-bottom: 75px;
+        margin-top: 60px;
+    }
+
+    &__left-block {
+        display: flexbox;
+    }
+
+    &__center-block {
+        display: flex;
+        margin: 0 auto;
+        max-height: 58px;
+        gap: 44px;
+    }
+
+    &__right-block {
+        display: flex;
+        margin-top: auto;
+        margin-left: auto;
+        align-items: flex-end;
+        justify-content: flex-end;
+    }
+
+    &__comp,
+    &__cookies {
+        font-size: 16px;
+    }
+
+    &__comp {
+        margin: 0 0 20px 0;
+        margin-bottom: 20px;
+    }
+
+    &__cookies {
+        display: flex;
+        font-weight: 600;
+        gap: 60px;
+    }
+
+    &__nav-link,
+    &__cookies-link {
+        text-decoration: none;
+        transition: color 0.2s;
+
+
+        &:active {
+            color: @red;
+        }
+
+        &:hover {
+            @media (hover: hover) {
+                color: @red;
+            }
+        }
+    }
+
+    &__links {
+        display: flex;
+        flex-direction: column;
+        margin: 30px 0;
+        font-weight: 600;
+        position: relative;
+
+        &:first-child {
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+
+        &::before {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            width: 4px;
+            background-color: @red;
+        }
+    }
+
+    &__nav-link {
+        text-decoration: none;
+        margin: 0 0 22px 22px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+
+    &__fading-lines {
+        display: flex;
+        align-items: center;
+        gap: 95px;
+        justify-content: center;
+        margin-bottom: 60px;
+    }
+
+    &__line {
+        width: 618px;
+        height: 2px;
+    }
+
+    &__line-left {
+        background: linear-gradient(to left, #000, transparent);
+    }
+
+    &__line-right {
+        background: linear-gradient(to right, #000, transparent);
+    }
+
+    &__social {
+        max-height: 58px;
+    }
+
+    &__circle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 58px;
+        height: 58px;
+        background-color: @black;
+        border-radius: 50%;
+    }
+
+    &__logo-icon {
+        display: block;
+        width: 20px;
+        height: 20px;
+        color: @white;
+    }
+
+    &__logo-icon2 {
+        height: 35px;
+        color: @black;
+        width: auto;  
+    }
+
+    &__descr {
+        margin-bottom: 0;
+    }
+}

@@ -78,6 +78,10 @@
     max-width: 522px;
     width: 100%;
     gap: 20px;
+
+    @media @bw768 {
+        gap: 0;
+    }
 }
 
 .swiper-pagination-bullets.swiper-pagination-horizontal {
@@ -105,6 +109,10 @@
     border-top: 5px solid transparent; //иск площадь нажатия
     border-bottom: 5px solid transparent; //иск площадь нажатия
     background-clip: padding-box;
+
+    @media @bw768 {
+        width: 9px;
+    }
 }
 
 .swiper-pagination-bullet.swiper-pagination-bullet-active {
