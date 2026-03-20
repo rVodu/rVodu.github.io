@@ -12,16 +12,16 @@
         gap: 65px 6.5%;
     }
 
-    @media @bw1020 {
+    @media @bw1170 {
         grid-template-columns: 1fr 390px;
-        gap: 60px;
+        gap: 0;
         grid-template-areas:
             "scheme scheme"
             "checks legend"
             "checks order";
     }
 
-    @media @bw768 {
+    @media @bw650 {
         grid-template-columns: 100%;
         grid-template-areas:
             "scheme"
@@ -45,6 +45,10 @@
         display: flex;
         flex-direction: column;
         align-items: flex-end;
+
+        @media @bw1170 {
+            align-items: center;
+        }
     }
 
     &__scheme-container {
@@ -52,7 +56,6 @@
         flex-direction: column;
         align-items: center;
         width: 100%;
-        max-width: 780px;
     }
 
     &__order {
@@ -63,11 +66,22 @@
         grid-area: legend;
         display: flex;
         flex-direction: column;
+        align-items: end;
+
+        @media @bw1170 {
+            width: 100%;
+        }
+
+        @media @bw650 {
+            align-items: flex-start;
+            ;
+        }
     }
 
     &__legend-item {
         display: flex;
-        margin-bottom: 5px;
+        margin-bottom: 13px;
+
     }
 
     &__box-red {
@@ -91,40 +105,79 @@
         margin-bottom: 5px;
     }
 
+    &__unavailable,
+    &__available {
+        display: flex;
+        margin-bottom: 13px;
+    }
+
+    &__unavailable {
+        float: right;
+        gap: 28px;
+    }
+
     .circle-cross {
         position: relative;
-        width: 100px;
-        /* ширина контейнера */
-        height: 100px;
-        /* высота контейнера */
+        height: 100%;
     }
 
     .circle-cross__circle {
         position: absolute;
-        width: 24px;
-        height: 24px;
+        width: 22px;
+        height: 22px;
         border-radius: 50%;
         border: 1px solid #333;
     }
 
-    /* Первый круг — например, слева сверху */
     .circle-cross__circle--first {
         border-color: @black;
     }
 
-    /* Второй круг — пересекается по центру и смещается */
     .circle-cross__circle--second {
         left: 12px;
         border-color: @red;
     }
 
+    &__icon {
+        flex-shrink: 0;
+        width: 24px;
+        height: 24px;
+        background-color: @gray_dark;
+        border-radius: 50%;
+    }
+
     &__section-title {
         padding: 80px 0 30px 0;
+        font-family: @font1;
+        font-size: 20px;
+        font-weight: 700;
+
+        @media @bw1170 {
+            padding: 0;
+            font-size: 16px;
+        }
     }
 
     &__scheme-title {
-        padding-top: 80px;
+        display: flex;
+        width: 162px;
+        justify-content: center;
+        align-items: center;
+        background-color: @black;
+        color: @white;
+        font-family: @font1;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 1.375;
+        text-align: center;
+        text-transform: uppercase;
+        padding: 6px 56px;
     }
+
+
+
+
+
 
     &__scheme-wrapper {
         position: relative;
@@ -134,7 +187,6 @@
             content: "";
             display: block;
             width: 100%;
-            //padding-top: 51.15384%;
         }
     }
 
@@ -153,6 +205,10 @@
     }
 
     &__qty {
+        font-size: 16px;
+        font-weight: 400;
+        margin-bottom: 18px;
+
         &::after {
             content: " " attr(data-caption) " | " attr(data-price);
         }
@@ -167,6 +223,11 @@
     }
 
     &__total {
+        font-size: 20px;
+        font-weight: 600;
+        margin: 12px auto 50px;
+        text-align: center;
+
         &::before {
             content: attr(data-caption);
             margin-right: 30px;
@@ -178,4 +239,17 @@
             font-size: 0.95em;
         }
     }
+
+    &__submit {
+        width: 100%;
+    }
+
+    &__descr-open {
+        display: flex;
+        flex-direction: row;
+        margin-left: 57px;
+    }
+
+
+
 }

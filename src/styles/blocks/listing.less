@@ -10,13 +10,13 @@
     }
 
     &__title {
-        margin-top: 75px;
+        margin-top: 200px;
     }
 
     &__events-list {
         display: flex;
         flex-wrap: wrap;
-        gap: 120px 58px;
+        justify-content: space-between;
 
         @media @bw1660 {
             gap: 90px 40px;
@@ -24,8 +24,8 @@
             justify-content: center;
         }
 
-        @media @bw1020 {
-            gap: 80px 40px;
+        @media @bw960 {
+            gap: 1px 40px;
         }
 
         @media @bw650 {

@@ -12,6 +12,10 @@
     z-index: 110;
     display: none;
 
+    @media @bw960 {
+        padding: 40px 20px;
+    }
+
     &__wrapper {
         box-sizing: border-box;
         position: relative;
@@ -38,6 +42,15 @@
         position: absolute;
         top: -30px;
         right: -30px;
+
+        @media @bw960 {
+            right: 0px;
+        }
+
+        @media @bw768 {
+            top: -18px;
+            right: -18px;
+        }
     }
 
     &__container {
@@ -46,9 +59,14 @@
         width: 100%;
         margin: 0 auto;
         padding: 0 40px 40px;
+
+        @media @bw960 {
+            padding: 0 20px 30px;
+        }
     }
 
     &__title {
+        box-sizing: border-box;
         position: relative;
         margin: -40px 0 70px;
         padding: 10px 85px;
@@ -63,5 +81,10 @@
         color: @white;
         letter-spacing: 0.02em;
         z-index: 1;
+
+        @media @bw650 {
+            font-size: 14px;
+            padding: 9px 20px 11px;
+        }
     }
 }

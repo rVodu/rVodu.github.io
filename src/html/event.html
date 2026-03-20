@@ -8,7 +8,7 @@
     <main class="main">
         <article class="event">
             <div class="event__container">
-                <!-- Здесь будут хлебные крошки -->
+                @@include('blocks/descr-event.html')
 
                 <div class="event__content content">
                     <h5>Программа мероприятия</h5>
@@ -109,7 +109,7 @@
                         <div class="reserve__scheme-container">
                             <h4 class="reserve__scheme-title">Сцена</h4>
                             <div class="reserve__scheme-wrapper">
-                                <svg class="scene" width="780" height="399" viewBox="0 0 780 399" fill="none"
+                                <svg class="scene" viewBox="0 0 780 399" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <g class="scene__dance-floor">
                                         <path
@@ -307,7 +307,7 @@
                         </div>
                     </div>
                     <div class="reserve__order">
-                        <h4 class="reserve__order-title">Ваши пригласительные билеты</h4>
+                        <h4 class="reserve__section-title">Ваши пригласительные билеты</h4>
                         <div class="reserve__tickets-list">
                             <div class="reserve__tickets">
                                 <div class="reserve__qty" data-caption="шт." data-price="1400">0</div>
@@ -324,7 +324,7 @@
                         </button>
                     </div>
                     <div class="reserve__legend">
-                        <h4>Стоимость пригласительного билета</h4>
+                        <h4 class="reserve__section-title">Стоимость пригласительного билета</h4>
                         <div class="reserve__legend-item">
                             <span class="reserve__box-red"></span>
                             <span>1400 ₽ | 1 персона</span>
@@ -333,14 +333,14 @@
                             <span class="reserve__box-black"></span>
                             <span>1250 ₽ | 1 персона</span>
                         </div>
-                        <h4>Примечание</h4>
+                        <h4 class="reserve__section-title">Примечание</h4>
                         <div class="reserve__notes">
                             <div class="reserve__available">
                                 <div class="circle-cross">
                                     <div class="circle-cross__circle circle-cross__circle--first"></div>
                                     <div class="circle-cross__circle circle-cross__circle--second"></div>
                                 </div>
-                                <span>доступные места</span>
+                                <span class="reserve__descr-open">доступные места</span>
                             </div>
                             <div class="reserve__unavailable">
                                 <div class="reserve__icon"></div>
